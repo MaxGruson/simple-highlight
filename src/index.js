@@ -12,15 +12,6 @@ import { ifCondition  } from '@wordpress/compose';
 import { Icon } from '@wordpress/icons';
 import { useSelect } from '@wordpress/data';
 
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * All files containing `style` keyword are bundled together. The code used
- * gets applied both to the front of your site and to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
-import './style.scss';
-
 /* eslint-disable max-len */
 // Custom Icon SVG.
 const highlighterIcon = (

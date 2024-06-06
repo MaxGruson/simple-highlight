@@ -13,7 +13,7 @@
  * @package           simple-highlight
  */
 
-namespace Simple\Highlight;
+namespace SIMPLE_HIGHLIGHT;
 
 const ROOT_DIR    = __DIR__;
 const ROOT_FILE   = __FILE__;
@@ -65,10 +65,19 @@ function enqueue_block_editor_assets(): void {
 		false
 	);
 
+	wp_enqueue_style(
+		PLUGIN_SLUG . '-styles',
+		plugins_url( '/style.css', __FILE__ ),
+		array(),
+		'1.0.1',
+		'all'
+	);
+
 	wp_set_script_translations(
 		PLUGIN_SLUG . '-block-scripts',
 		'simple-highlight',
 		ROOT_DIR . 'languages'
 	);
 }
+
 add_action( 'plugins_loaded', __NAMESPACE__ . '\setup' );
